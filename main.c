@@ -29,14 +29,26 @@ int main(void) {
 	scanf("%d%d%d", &a1, &n, &d);
 	sum = (2 * a1 + (n - 1) * d) * n / 2;
 	printf("resultat: %d\n", sum);
-	*/
+	
 
+	/*
 	int a, b, c;
 	printf("Enter numbers: \n");
 	scanf("%d%d%d", &a, &b, &c);
 	float result;
 	result = (a + b + c) / 3.f;
 	printf("resultat: %.2f\n", result);
+	*/
+
+	int x;
+	scanf("%d", &x);
+	if (x > 100 && x < 999)
+	{
+		printf("%d\n", (x / 100) * ((x % 100) / 10) * (x % 10));
+	}
+	
+	else
+	printf("Chislo ne trehznachnoe, poprobuyte echo raz\n");
 
 	return 0;
 }
