@@ -1,40 +1,26 @@
-
 #include <stdio.h>
-#include <locale.h>
-
-float c;
-
+#include <limits.h>
+#include <float.h>
 int main(void) {
-	setlocale (LC_ALL,"Rus");
-	printf("Enter choice:\nStart\nStop\nExit\n");\
-	printf("----------------------------------------------------------------------\n");
-	printf("|   Type | Byte(s)  |                        |                       |\n");
-	printf("|        | of memory|                     Min|                    Max|\n");
-	printf("----------------------------------------------------------------------\n"); 
-	printf("|  int8_t|         1|                    -128|                    127|\n"); 
-	printf("| uint8_t|         1|                       0|                    255|\n");
-	printf("| int16_t|         2|                  -32768|                  32767|\n");
-	printf("|uint16_t|         2|                       0|                  65535|\n");
-	printf("| int32_t|         4|              2147483648|             2147483647|\n");
-	printf("|uint32_t|         4|                       0|             4294967295|\n");
-	printf("| int64_t|         8|    -9223372036854775808|    9223372036854775807|\n");
-	printf("|uint64_t|         8|                       0|   18446744073709551615|\n");
-	printf("|   float|         4|          -3,4028235E+38|          3,4028235E+38|\n");
-	printf("|  double|         8|-1,7976931348623157E+308|1,7976931348623157E+308|\n \n \n \n");	
-	printf("Command for compile\ngcc main.c -o main\nCommand For Start:\n./main\n\n\n");
-	printf("---------------------------------------------------------------------\n");
-	const float a = 10.f;
-	const int b = 0xFFU;
-	c = a + b;
-	printf("c = %f", c);
-	float d, e, f;
-	printf("Type number: \n");
-	scanf("%f%f", &d, &e);
-	f = d + e;
-	printf("result - %f\n------------------------------\n",f);
-	printf("%9.3f\n------------------------------\n",f);
 
-	getchar();
-		return 0;
+printf("+---------------------------------------------------------------------+\n");
+printf("|            Type | Byte(s) |                  |                       |\n");
+printf("|                \\of memory/                Min|                    Max|\n");
+printf("|                 \\  /                         |                       |\n");
+printf("+------------------+--+------------------------+-----------------------+\n");
+printf("|%18s|%ld |%24d|%23d|\n","char",sizeof(char),CHAR_MIN,CHAR_MAX);
+printf("|%18s|%ld |%24d|%23d|\n","unsigned char",sizeof(unsigned char),0,UCHAR_MAX);
+printf("|%18s|%ld |%24d|%23d|\n","short",sizeof(short),SHRT_MIN,SHRT_MAX);
+printf("|%18s|%ld |%24d|%23d|\n","usigned short",sizeof(unsigned short),0,USHRT_MAX);
+printf("|%18s|%ld |%24ld|%23ld|\n","long",sizeof(long),LONG_MIN,LONG_MAX);
+printf("|%18s|%ld |%24u|%23lu|\n","unsigned long",sizeof(unsigned long),0,ULONG_MAX);
+printf("|%18s|%ld |%24lld|%23lld|\n","long long",sizeof(long long),LLONG_MIN,LLONG_MAX);
+printf("|%18s|%ld |%24d|%23llu|\n","unsigned long long",sizeof(unsigned long long),0,ULLONG_MAX);
+printf("|%18s|%ld |%24e|%23e|\n","float",sizeof(float),-FLT_MAX,FLT_MAX);
+printf("|%18s|%ld |%24.16E|%23.16E|\n","double",sizeof(double),DBL_MIN,DBL_MAX);
+printf("|%18s|%ld| %23.15LE|%22.15LE|\n","long double",sizeof(long double),LDBL_MIN,LDBL_MAX);
+
+
+return 0;
 }
 
