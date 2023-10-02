@@ -20,5 +20,12 @@ int main(void) {
 	printf("|%18s|%ld |%24.16E|%23.16E|\n", "double", sizeof(double), DBL_MIN, DBL_MAX);
 	printf("|%18s|%ld| %23.15LE|%22.15LE|\n", "long double", sizeof(long double), LDBL_MIN, LDBL_MAX);
 
+	int a1, n, d;
+	int sum;
+	printf("Enter numbers: \n");
+	scanf("%d%d%d", &a1, &n, &d);
+	sum = (2 * a1 + (n - 1) * d) * n / 2;
+	printf("resultat: %d\n", sum);
+
 	return 0;
 }
