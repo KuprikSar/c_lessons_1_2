@@ -35,7 +35,7 @@ int main(void) {
 	float result;
 	printf("Enter numbers: \n");
 	scanf("%d%d%d", &a, &b, &c);
-	result = (a + b * c) / 3;
+	result = (a + b + c) / 3;
 	printf("resultat: %.2f\n", result);
 
 	return 0;
