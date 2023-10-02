@@ -1,3 +1,7 @@
+// Сумма трех чисел. Ввести 3 числа через пробел, получить их сумму
+// Компилятор - gcc homework2_1.c -o homework2_1
+// Запуск - ./homework2_1
+
 #include <stdio.h>
 #include <limits.h>
 #include <float.h>
