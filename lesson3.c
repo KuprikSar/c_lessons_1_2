@@ -41,5 +41,14 @@ int main(void) {
     printf("sum - %d\n", (min + maxim));
     */
 
-return 0;
+    float a, b, c, d, e, f;
+    float N;
+    scanf("%f%f%f%f%f%f", &a, &b, &c, &d, &e, &f);
+    a = a - c;
+    b = b - d;
+    N = (a * a) / (e * e) + (b * b) / (f * f); 
+    N < 1 ? printf ("Yes\n") : printf("No\n");
+    printf("%f\n", N);
+
+    return 0;
 }
